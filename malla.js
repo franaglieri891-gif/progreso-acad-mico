@@ -1,5 +1,4 @@
 const materias = [
- const materias = [
   // ------------------ 1er Semestre ------------------
   { nombre: "Cuestión Social", semestre: "1er Semestre", creditos: 6, nota: "", estado: "Pendiente" },
   { nombre: "Problema del Desarrollo", semestre: "1er Semestre", creditos: 8, nota: "", estado: "Pendiente" },
