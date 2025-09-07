@@ -67,8 +67,8 @@ const materias = [
   { nombre: "Optativa", semestre: "8vo Semestre Ciclo Avanzado", creditos: 6, nota: "", estado: "Pendiente" },
   { nombre: "Epistemología", semestre: "8vo Semestre Ciclo Avanzado", creditos: 6, nota: "", estado: "Pendiente" }
 ];
-Luego agregaremos todas las demás materias
-];
+
+// ------------------ Funciones para renderizar ------------------
 
 function renderMalla() {
   const tbody = document.querySelector("#malla tbody");
@@ -93,9 +93,10 @@ function updateNota(index, value) {
 const estados = ["Pendiente", "En curso", "Aprobada"];
 function cambiarEstado(index) {
   const estadoActual = materias[index].estado;
-  const nuevo = estados[(estados.indexOf(estadoActual)+1) % estados.length];
+  const nuevo = estados[(estados.indexOf(estadoActual) + 1) % estados.length];
   materias[index].estado = nuevo;
   renderMalla();
 }
 
+// Inicializa la tabla
 renderMalla();
