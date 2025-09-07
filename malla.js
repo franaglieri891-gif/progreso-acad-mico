@@ -88,6 +88,16 @@ function renderMalla() {
 
 function updateNota(index, value) {
   materias[index].nota = value;
+  function actualizarProgreso() {
+  const total = materias.length;
+  const aprobadas = materias.filter(m => m.estado === "Aprobada").length;
+  const porcentaje = Math.round((aprobadas / total) * 100);
+
+  const barra = document.getElementById("barra-progreso");
+  barra.style.width = porcentaje + "%";
+  barra.textContent = porcentaje + "%";
+}
+
 }
 
 const estados = ["Pendiente", "En curso", "Aprobada"];
